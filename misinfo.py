@@ -44,7 +44,7 @@ if submitted:
 
         # Display results
         st.subheader("Prediction Result:")
-        if pred_class == 1:
+        if pred_class == 0:
             st.error("⚠️ This tweet likely contains misinformation.")
             st.write(f"Confidence: {confidence:.2%}")
         else:

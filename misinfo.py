@@ -71,11 +71,11 @@ if submitted:
             if pred_class == 0:
                 st.error("⚠️ This tweet likely contains misinformation.")
                 st.write(f"Confidence: {confidence:.2%}")
-                st.write(f"Reason: The BiLSTM model detected patterns associated with misinformation. Gemini validation: {gemini_explanation}")
+                st.write(f"Reason: {gemini_explanation}")
             else:
                 st.success("✅ This tweet is likely safe.")
                 st.write(f"Confidence: {(1 - confidence):.2%}")
-                st.write(f"Reason: The BiLSTM model found no strong indicators of misinformation. Gemini validation: {gemini_explanation}")
+                st.write(f"Reason: {gemini_explanation}")
         else:
             st.warning("The BiLSTM model and Gemini disagree on the prediction or an error occurred.")
             st.write(f"Model Prediction: {'Misinformation' if pred_class == 0 else 'Safe'} (Confidence: {confidence:.2%})")
@@ -96,4 +96,3 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.markdown("---")
-st.write("Built with Streamlit, TensorFlow, and Google Gemini | Model trained on misinformation dataset")

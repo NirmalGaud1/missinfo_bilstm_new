@@ -77,9 +77,8 @@ if submitted:
                 st.write(f"Confidence: {(1 - confidence):.2%}")
                 st.write(f"Reason: {gemini_explanation}")
         else:
-            st.warning("The BiLSTM model and Gemini disagree on the prediction or an error occurred.")
             st.write(f"Model Prediction: {'Misinformation' if pred_class == 0 else 'Safe'} (Confidence: {confidence:.2%})")
-            st.write(f"Gemini Response: {gemini_explanation}")
+            st.write(f"Response: {gemini_explanation}")
 
 # Add some styling and footer
 st.markdown("""

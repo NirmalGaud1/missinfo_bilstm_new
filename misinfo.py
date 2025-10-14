@@ -14,7 +14,7 @@ st.write("Enter a tweet about fluoride or water fluoridation to predict if it co
 # Configure Gemini API
 API_KEY = "AIzaSyCZzcfBrHYjSXg6gqxFhfnF58-HKvWNzXc"
 genai.configure(api_key=API_KEY)
-gemini_model = genai.GenerativeModel('gemini-1.5-flash')
+gemini_model = genai.GenerativeModel('gemini-2.5-flash')
 
 # Load the saved model and tokenizer
 @st.cache_resource

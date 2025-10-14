@@ -12,7 +12,7 @@ st.title("Fluoride Misinformation Detection App")
 st.write("Enter a tweet about fluoride or water fluoridation to predict if it contains misinformation.")
 
 # Configure Gemini API
-API_KEY = "AIzaSyA-9-lTQTWdNM43YdOXMQwGKDy0SrMwo6c"
+API_KEY = "AIzaSyCZzcfBrHYjSXg6gqxFhfnF58-HKvWNzXc"
 genai.configure(api_key=API_KEY)
 gemini_model = genai.GenerativeModel('gemini-1.5-flash')
 

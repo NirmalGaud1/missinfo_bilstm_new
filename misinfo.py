@@ -11,12 +11,7 @@ st.set_page_config(page_title="Fluoride Misinformation Detection App", page_icon
 st.title("Fluoride Misinformation Detection App")
 st.write("Enter a tweet about fluoride or water fluoridation to predict if it contains misinformation.")
 
-try:
-    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
-except Exception:
-    st.error("❌ GEMINI_API_KEY not found! Add it in Streamlit settings.")
-    st.stop()
-
+api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 gemini_model = genai.GenerativeModel('gemini-2.5-flash')
 

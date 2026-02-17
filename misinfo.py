@@ -5,6 +5,7 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 import pickle
 import google.generativeai as genai
+import os
 
 # Streamlit app configuration
 st.set_page_config(page_title="Fluoride Misinformation Detection App", page_icon="🦷")

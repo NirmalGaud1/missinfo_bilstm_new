@@ -12,7 +12,7 @@ st.set_page_config(page_title="Fluoride Misinformation Detection App", page_icon
 st.title("Fluoride Misinformation Detection App")
 st.write("Enter a tweet about fluoride or water fluoridation to predict if it contains misinformation.")
 
-api_key = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 gemini_model = genai.GenerativeModel('gemini-2.5-flash')
 

@@ -16,11 +16,6 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 gemini_model = genai.GenerativeModel('gemini-2.5-flash')
 
-# Configure Gemini API
-# API_KEY = "AIzaSyCI08wvhAQgKagCWM6jJ8AP97SFN2CgodA"
-# genai.configure(api_key=API_KEY)
-# gemini_model = genai.GenerativeModel('gemini-2.5-flash')
-
 # Load the saved model and tokenizer
 @st.cache_resource
 def load_resources():
